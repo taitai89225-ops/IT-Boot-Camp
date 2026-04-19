@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>あなとじくん</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud">
+        <h1 id="scoreLine">Dist: 0m | Deaths: 0</h1>
+        <p id="subLine" class="sub-line">Level 1 | Time 45.0s | Best --</p>
+      </header>
+
+      <section class="board-wrap">
+        <div id="grid" class="grid" aria-label="game board"></div>
+      </section>
+
+      <section class="status-row">
+        <span id="playerAStatus">A: Racing</span>
+        <span id="playerBStatus">B: Racing</span>
+        <span id="bridgeText">Bridge: 0</span>
+      </section>
+
+      <p id="messageText" class="message">
+        A は WASD、B は矢印キーで動きます。2人とも自分のゴールに着けば次へ進みます。
+      </p>
+
+      <footer class="controls-line">
+        <span>WASD: Player A</span>
+        <span>Arrow Keys: Player B</span>
+        <span>R: Retry</span>
+        <span>N: Next Stage</span>
+        <span>C: Reset</span>
+      </footer>
+
+      <div class="button-row">
+        <button id="nextStageButton" class="inline-button">Next</button>
+        <button id="retryButton" class="inline-button">Retry</button>
+        <button id="resetButton" class="inline-button">Reset</button>
+      </div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
